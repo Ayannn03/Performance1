@@ -202,14 +202,10 @@ app.get('/api/course-details', (req, res) => {
 });
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/course')
+mongoose.connect('mongodb://localhost:27017/mongo-test')
   .then(() => console.log('Connected to MongoDB...'))
   .catch((err) => console.error('Connection failed...', err));
 
-// Define a simple route
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
 
 // Start the server
 app.listen(port, () => {
